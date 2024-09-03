@@ -26,8 +26,6 @@ Verify the installation:
 import flask
 print(flask.__version__)
 ```
-```pip show flask
-```
 
 ## Your First Flask Application
 
