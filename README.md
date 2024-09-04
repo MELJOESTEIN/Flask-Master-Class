@@ -108,7 +108,7 @@ This part explains how to structure and use templates in your Flask applications
 **Case 1: Module**
 
 ```
-application.py
+main.py
 templates/
     hello.html
 ```
