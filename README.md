@@ -248,3 +248,129 @@ Try adding more routes or modifying the existing ones. For example:
 
 ## Conclusion
 Congratulations! You've created your first Flask application. This exercise demonstrates the basics of routing and handling requests in Flask.
+
+
+
+
+# Flask Master Class - Day 2: Flask Fundamentals and Project Setup
+
+
+### 1. HTTP Methods and Form Handling
+- Introduction to common HTTP methods (GET, POST, PUT, DELETE)
+- Handling form submissions in Flask
+- Using `request` object to access form data
+- Demonstration: Simple form handling in Flask
+
+### 2. Flask Configuration and Environment Variables
+- Configuring Flask applications
+- Using `config` object
+- Setting up environment variables
+- Best practices for managing configurations
+
+### 3. Static Files and Flask's File Structure
+- Organizing static files (CSS, JavaScript, images)
+- Flask's default file structure
+- Creating a project layout for larger applications
+
+### 4. Introduction to Flask Extensions
+- Overview of popular Flask extensions
+- Installing and initializing extensions
+- Brief introduction to Flask-WTF (to be covered in more detail on Day 3)
+
+### 5. Setting up the Calculator Project Structure
+- Creating a new Flask project for the calculator
+- Organizing routes, templates, and static files
+- Planning the conversion of the Python calculator to a Flask web application
+
+
+```markdown
+# Flask Calculator Project Setup
+
+This README provides instructions for setting up the Flask Calculator project, which we'll be developing during the Flask Master Class.
+
+## Project Structure
+
+```
+calculator/
+├── app/
+│   ├── __init__.py
+│   ├── routes.py
+│   ├── static/
+│   │   ├── css/
+│   │   └── js/
+│   └── templates/
+│       ├── base.html
+│       └── calculator.html
+├── config.py
+├── run.py
+└── requirements.txt
+```
+
+## Setup Instructions
+
+1. Create a new directory for your project:
+   ```
+   mkdir flask_calculator
+   cd flask_calculator
+   ```
+
+2. Set up a virtual environment:
+   ```
+   python -m venv venv
+   source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+   ```
+
+3. Install Flask:
+   ```
+   pip install flask
+   ```
+
+4. Create the project structure as shown above.
+
+5. In `__init__.py`, initialize your Flask app:
+   ```python
+   from flask import Flask
+
+   app = Flask(__name__)
+
+   from app import routes
+   ```
+
+6. In `routes.py`, set up a basic route:
+   ```python
+   from app import app
+
+   @app.route('/')
+   def index():
+       return "Calculator coming soon!"
+   ```
+
+7. In `run.py`, add:
+   ```python
+   from app import app
+
+   if __name__ == '__main__':
+       app.run(debug=True)
+   ```
+
+8. Create a `requirements.txt` file:
+   ```
+   pip freeze > requirements.txt
+   ```
+
+9. Run your Flask app:
+   ```
+   python run.py
+   ```
+
+Your basic Flask Calculator project is now set up and ready for further development!
+```
+
+## Practical Exercises
+
+1. Create a simple form in Flask that accepts two numbers and an operation, then displays the result.
+2. Set up a configuration file for your calculator project with debug mode and a secret key.
+3. Add a static CSS file to your project and use it to style your calculator form.
+4. Research and implement one Flask extension in your project (e.g., Flask-Bootstrap for quick styling).
+
+Remember to encourage students to refer to the Flask documentation and to experiment with the code as they go along.
