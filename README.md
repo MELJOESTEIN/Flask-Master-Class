@@ -94,6 +94,76 @@ def hello(name):
     return render_template('hello.html', name=name)
 ```
 
+**Flask Templates with Jinja2**
+
+This part explains how to structure and use templates in your Flask applications.
+
+**Template Folder Location:**
+
+- For standalone modules (`.py` files), Flask searches for templates in a folder named `templates` located at the same level as the module.
+- For packages, the `templates` folder resides within the package directory, alongside the `__init__.py` file.
+
+**Example Structure:**
+
+**Case 1: Module**
+
+```
+application.py
+templates/
+    hello.html
+```
+
+**Case 2: Package**
+
+```
+application/
+    __init__.py
+    templates/
+        hello.html
+```
+
+**Jinja2 Templating Language**
+
+Flask leverages Jinja2 for powerful templating capabilities. Jinja2 allows you to combine static content with dynamic data from your Python code. For comprehensive guidance, refer to the official Jinja2 documentation: [https://jinja.palletsprojects.com/templates/](https://jinja.palletsprojects.com/templates/)
+
+**Example Template:**
+
+```html
+<!DOCTYPE html>
+<title>Hello from Flask</title>
+
+{% if person %}
+  <h1>Hello {{ person }}!</h1>
+{% else %}
+  <h1>Hello, World!</h1>
+{% endif %}
+```
+
+**Explanation:**
+
+- `<!DOCTYPE html>` declares the document type as HTML.
+- `<title>` sets the page title.
+- `{% if person %}` starts an if statement.
+    - If a variable named `person` is passed to the template with a value, the `<h1>` element displays "Hello [person's name]!"
+- `{% else %}` defines the "else" block.
+    - If `person` is not provided, the `<h1>` element displays "Hello, World!"
+- `{% endif %}` ends the if statement.
+- `{{ person }}` interpolates the value of the `person` variable within the `<h1>` element.
+
+**Remember:**
+
+- To pass data from your Flask routes to the template, use the `render_template` function (`from flask import render_template`).
+- Jinja2 provides various features like loops, filters, and more for complex templating scenarios.
+
+**Additional Tips**
+
+- Consider organizing templates into subfolders within the `templates` directory for larger projects.
+- Maintain code readability by using clear variable names.
+- Explore Jinja2's advanced features for richer templating possibilities.
+
+
+
+
 ## Hands-on Exercise
 
 1. Create a "Hello, World!" Flask application
