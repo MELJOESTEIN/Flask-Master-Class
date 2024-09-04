@@ -254,6 +254,7 @@ Congratulations! You've created your first Flask application. This exercise demo
 
 
 
+
 ## Flask Master Class - Day 2: Flask Fundamentals and Project Setup
 
 
