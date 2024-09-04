@@ -253,8 +253,6 @@ Congratulations! You've created your first Flask application. This exercise demo
 
 
 
-
-
 ## Flask Master Class - Day 2: Flask Fundamentals and Project Setup
 
 
@@ -265,23 +263,8 @@ This document outlines the topics covered in Day 2 of the Flask Master Class:
     * Handling form submissions in Flask
     * Using the `request` object to access form data
     * Demonstration: Simple form handling example
-* **Flask Configuration and Environment Variables:**
-    * Configuring Flask applications
-    * Using the `config` object
-    * Setting up environment variables
-    * Best practices for managing configurations
-* **Static Files and Flask's File Structure:**
-    * Organizing static files (CSS, JavaScript, images)
-    * Flask's default file structure
-    * Creating a project layout for larger applications
-* **Introduction to Flask Extensions:**
-    * Overview of popular Flask extensions
-    * Installing and initializing extensions
-    * Brief introduction to Flask-WTF (covered in detail on Day 3)
-* **Setting up the Calculator Project Structure:**
-    * Creating a new Flask project for the calculator
-    * Organizing routes, templates, and static files
-    * Planning the conversion of a Python calculator to a Flask web application
+
+   
 
 **Coding Part: Flask Calculator Project Setup**
 
@@ -324,7 +307,7 @@ calculator/
 3. **Install Flask:**
 
    ```bash
-   pip install flask
+   pip install Flask
    ```
 
 4. **Create the project structure shown above.**
