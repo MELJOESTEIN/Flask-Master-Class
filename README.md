@@ -208,9 +208,9 @@ Create a simple Flask application that displays "Hello, World!" and shows the cu
    ```
 
 ### 2. Create the Flask application
-1. Create a new file called `app.py` and open it in your text editor.
+1. Create a new file called `myapp.py` and open it in your text editor.
 
-2. Add the following code to `app.py`:
+2. Add the following code to `myapp.py`:
 
 ```python
 from flask import Flask
@@ -226,9 +226,6 @@ def hello_world():
 def current_time():
     now = datetime.now()
     return f'The current date and time is: {now.strftime("%Y-%m-%d %H:%M:%S")}'
-
-if __name__ == '__main__':
-    app.run(debug=True)
 ```
 
 ### 3. Run the application
@@ -236,7 +233,7 @@ if __name__ == '__main__':
 
 2. Run the Flask application:
    ```
-   python app.py
+   flask --app myapp run --debug
    ```
 
 3. Open your web browser and visit:
