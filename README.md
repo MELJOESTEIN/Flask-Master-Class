@@ -293,8 +293,8 @@ calculator/
 1. **Create a project directory:**
 
    ```bash
-   mkdir flask_calculator
-   cd flask_calculator
+   mkdir calculator
+   cd calculator
    ```
 
 2. **Set up a virtual environment (recommended):**
