@@ -256,7 +256,7 @@ Congratulations! You've created your first Flask application. This exercise demo
 # Flask Master Class - Day 2: Flask Fundamentals and Project Setup
 
 
-This document outlines the topics covered in Day 2 of the Flask Master Class:
+This part outlines the topics covered in Day 2 of the Flask Master Class:
 
 * **HTTP Methods and Form Handling:**
     * Introduction to common HTTP methods (GET, POST, PUT, DELETE)
