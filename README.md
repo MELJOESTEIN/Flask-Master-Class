@@ -253,7 +253,7 @@ Congratulations! You've created your first Flask application. This exercise demo
 
 
 
-## Flask Master Class - Day 2: Flask Fundamentals and Project Setup
+# Flask Master Class - Day 2: Flask Fundamentals and Project Setup
 
 
 This document outlines the topics covered in Day 2 of the Flask Master Class:
