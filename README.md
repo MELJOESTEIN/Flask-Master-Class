@@ -42,7 +42,10 @@ def hello_world():
 
 Run the application:
 ```
-python app.py
+flask --app main run ( without debug mode off ) 
+```
+```
+flask --app main run --debug ( with debug mode on )
 ```
 
 Access the application in a web browser: `http://127.0.0.1:5000/`
