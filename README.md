@@ -350,7 +350,7 @@ calculator/
 9. **Run your Flask app:**
 
    ```bash
-   python run.py
+   flask --app myapp run --debug
    ```
 
 Now you have a basic Flask Calculator project ready for further development!
