@@ -363,3 +363,109 @@ Now you have a basic Flask Calculator project ready for further development!
 4. **Flask extensions:** Research and implement a Flask extension in your project (e.g., Flask-Bootstrap for easy styling).
 
 **Remember:** Refer to the Flask documentation ([https://flask.palletsprojects.com/en/2.3.x/](https://flask.palletsprojects.com/en/2.3.x/)) for more details and experiment with the code as you learn.
+
+
+
+
+
+# Weather App
+
+This is a simple Flask-based web application that fetches and displays weather data using the Open-Meteo API. It's designed as a learning project for beginners to understand the basics of web development with Python and Flask.
+
+## Project Structure
+
+```
+weather_app/
+│
+├── app.py
+├── templates/
+│   └── weather.html
+└── requirements.txt
+```
+
+- `app.py`: This is the main Python file containing the Flask application code.
+- `templates/weather.html`: This is the HTML template for the web page.
+- `requirements.txt`: This file lists the Python packages required for the project.
+
+## Code Explanation
+
+### app.py
+
+This file contains the main logic of our Flask application. Let's break it down:
+
+1. Importing necessary modules:
+   ```python
+   from flask import Flask, render_template, request
+   import requests
+   ```
+   - `Flask`: The core Flask module to create our web application.
+   - `render_template`: Used to render HTML templates.
+   - `request`: Allows us to handle HTTP requests.
+   - `requests`: Used to make HTTP requests to the weather API.
+
+2. Creating the Flask application:
+   ```python
+   app = Flask(__name__)
+   ```
+
+3. Defining the route and view function:
+   ```python
+   @app.route('/', methods=['GET', 'POST'])
+   def weather():
+       # Function body
+   ```
+   This sets up the main (and only) route of our application. It handles both GET and POST requests.
+
+4. Handling form submission and API request:
+   ```python
+   if request.method == 'POST':
+       latitude = request.form['latitude']
+       longitude = request.form['longitude']
+       url = f"https://api.open-meteo.com/v1/forecast?latitude={latitude}&longitude={longitude}&current=temperature_2m,wind_speed_10m&hourly=temperature_2m,relative_humidity_2m,wind_speed_10m"
+       
+       response = requests.get(url)
+       if response.status_code == 200:
+           weather_data = response.json()
+   ```
+   This code runs when the form is submitted. It retrieves the latitude and longitude from the form, constructs the API URL, sends a request to the Open-Meteo API, and stores the response.
+
+5. Rendering the template:
+   ```python
+   return render_template('weather.html', weather=weather_data)
+   ```
+   This line renders the `weather.html` template, passing the weather data to it.
+
+### templates/weather.html
+
+This file contains the HTML structure of our web page. Key points:
+
+1. It uses a form to collect latitude and longitude from the user.
+2. It uses Jinja2 templating to display the weather data dynamically.
+3. It includes conditional rendering to only show weather data when it's available.
+
+## Learning Points
+
+1. **Flask Basics**: This project demonstrates how to set up a basic Flask application with routing and template rendering.
+
+2. **HTTP Methods**: The application handles both GET (initial page load) and POST (form submission) requests.
+
+3. **API Integration**: It shows how to make requests to an external API (Open-Meteo) and handle the response.
+
+4. **HTML Templates**: The project uses Jinja2 templating to dynamically render HTML based on the data received from the server.
+
+5. **Form Handling**: It demonstrates how to create and handle HTML forms in Flask.
+
+6. **JSON Parsing**: The application parses JSON data received from the API.
+
+7. **Error Handling**: Basic error handling is implemented to check if the API request was successful.
+
+## Next Steps
+
+To further develop this project, consider:
+
+1. Adding error handling and user feedback for invalid inputs.
+2. Implementing caching to store recent weather data and reduce API calls.
+3. Enhancing the UI with CSS and potentially JavaScript for a better user experience.
+4. Adding more weather data points or visualization of the data.
+
+Remember, coding is a journey of continuous learning and improvement. Don't hesitate to experiment with the code and expand its functionality!
