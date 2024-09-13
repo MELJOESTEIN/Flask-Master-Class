@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Calculator</h1>
+<form method="POST" action="{{ url_for('calculator') }}">
+    {{ form.hidden_tag() }}
+    <div>
+        {{ form.expression.label }}
+        {{ form.expression(size=32) }}
+    </div>
+    <div>
+        {{ form.submit() }}
+    </div>
+</form>
+
+{% if result is not none %}
+<div>
+    <h2>Result:</h2>
+    <p>{{ result }}</p>
+</div>
+{% endif %}
+
+<div>
+    <h3>Last Calculation:</h3>
+    <p>{{ last_calculation }}</p>
+</div>
+{% endblock %}

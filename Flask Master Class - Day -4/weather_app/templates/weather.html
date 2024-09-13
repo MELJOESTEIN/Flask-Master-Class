@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+</head>
+<body>
+    <h1>Weather App</h1>
+    <form method="POST">
+        <input type="text" name="latitude" placeholder="Enter latitude" required>
+        <input type="text" name="longitude" placeholder="Enter longitude" required>
+        <input type="submit" value="Get Weather">
+    </form>
+
+    {% if weather %}
+        <h2>Current Weather</h2>
+        <p>Temperature: {{ weather.current.temperature_2m }}°C</p>
+        <p>Wind Speed: {{ weather.current.wind_speed_10m }} m/s</p>
+
+        <h2>Hourly Forecast (Next 24 hours)</h2>
+        <table border="1">
+            <tr>
+                <th>Time</th>
+                <th>Temperature (°C)</th>
+                <th>Relative Humidity (%)</th>
+                <th>Wind Speed (m/s)</th>
+            </tr>
+            {% for i in range(24) %}
+                <tr>
+                    <td>{{ weather.hourly.time[i] }}</td>
+                    <td>{{ weather.hourly.temperature_2m[i] }}</td>
+                    <td>{{ weather.hourly.relative_humidity_2m[i] }}</td>
+                    <td>{{ weather.hourly.wind_speed_10m[i] }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    {% endif %}
+</body>
+</html>
