@@ -284,7 +284,7 @@ calculator/
 │       ├── base.html
 │       └── calculator.html
 ├── config.py
-├── run.py
+├── main.py
 └── requirements.txt
 ```
 
