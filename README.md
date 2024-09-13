@@ -174,7 +174,9 @@ Flask leverages Jinja2 for powerful templating capabilities. Jinja2 allows you t
 
 - [Flask Documentation](https://flask.palletsprojects.com/)
 - [Jinja2 Documentation](https://jinja.palletsprojects.com/)
+- [https://machinelearningprojects.net/flask-projects/#google_vignette](https://machinelearningprojects.net/flask-projects/#google_vignette)
 - [Flask Mega-Tutorial](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world)
+
 
 
 
