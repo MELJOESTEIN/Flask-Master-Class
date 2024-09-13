@@ -408,13 +408,8 @@ calculator/
 
 ## Installation
 
-1. Clone the repository:
-   ```
-   git clone https://github.com/yourusername/advanced-flask-calculator.git
-   cd advanced-flask-calculator
-   ```
 
-2. Create a virtual environment:
+1. Create a virtual environment:
    ```
    python -m venv venv
    ```
@@ -424,7 +419,7 @@ calculator/
    py -m venv venv
    ```
 
-4. Activate the virtual environment:
+2. Activate the virtual environment:
    - On Windows:
      ```
      venv\Scripts\activate
@@ -434,7 +429,7 @@ calculator/
      source venv/bin/activate
      ```
 
-5. Install the required packages:
+3. Install the required packages:
    ```
    pip install -r requirements.txt
    ```
@@ -448,7 +443,7 @@ The application uses a `config.py` file for configuration. You can modify this f
 To run the application, execute:
 
 ```
-python run.py
+python main.py
 ```
 
 The application will start, and you can access it by opening a web browser and navigating to `http://localhost:5000`.
