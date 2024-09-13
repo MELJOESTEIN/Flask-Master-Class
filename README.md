@@ -366,9 +366,171 @@ Now you have a basic Flask Calculator project ready for further development!
 
 
 
+# Flask Master Class - Day 3: Advanced Flask and Calculator Project 
+
+## Overview
+
+This project is an advanced Flask-based web calculator application developed as part of the Flask Master Class - Day 3. It demonstrates the use of advanced Flask concepts and implements a fully functional calculator with error handling, logging, and session management.
+
+## Features
+
+- Basic arithmetic operations (addition, subtraction, multiplication, division)
+- Advanced operations (exponentiation, square root)
+- Error handling for invalid expressions
+- Logging of calculations and errors
+- Session management to store the last calculation
+- Responsive web interface
+
+## Project Structure
+
+```
+calculator/
+├── myapp/
+│   ├── __init__.py
+│   ├── routes.py
+│   ├── static/
+│   │   ├── css/
+│   │   │   └── style.css
+│   │   └── js/
+│   │       └── script.js
+│   └── templates/
+│       ├── base.html
+│       └── calculator.html
+├── config.py
+├── main.py
+└── requirements.txt
+```
+
+## Prerequisites
+
+- Python 3.7+
+- pip (Python package installer)
+
+## Installation
+
+1. Clone the repository:
+   ```
+   git clone https://github.com/yourusername/advanced-flask-calculator.git
+   cd advanced-flask-calculator
+   ```
+
+2. Create a virtual environment:
+   ```
+   python -m venv venv
+   ```
+   
+    On Windows:
+    ```
+   py -m venv venv
+   ```
+
+4. Activate the virtual environment:
+   - On Windows:
+     ```
+     venv\Scripts\activate
+     ```
+   - On macOS and Linux:
+     ```
+     source venv/bin/activate
+     ```
+
+5. Install the required packages:
+   ```
+   pip install -r requirements.txt
+   ```
+
+## Configuration
+
+The application uses a `config.py` file for configuration. You can modify this file to change application settings such as the secret key and debug mode.
+
+## Running the Application
+
+To run the application, execute:
+
+```
+python run.py
+```
+
+The application will start, and you can access it by opening a web browser and navigating to `http://localhost:5000`.
+
+## Usage
+
+1. Enter a mathematical expression in the input field.
+2. Click the "Calculate" button or press Enter.
+3. The result will be displayed below the input field.
+4. If there's an error in your expression, an error message will be shown.
+5. The last calculation is stored in the session and displayed on the page.
+
+## Code Overview
+
+### `myapp/__init__.py`
+
+This file initializes the Flask application, sets up configuration, logging, and registers routes.
+
+### `myapp/routes.py`
+
+Contains the route definitions for the calculator application. It includes:
+- The main calculator route that handles GET and POST requests
+- Error handling for invalid expressions
+- Logging of calculations and errors
+- Session management to store the last calculation
+
+### `myapp/templates/calculator.html`
+
+The HTML template for the calculator interface. It includes:
+- A form for entering mathematical expressions
+- Display area for the calculation result
+- Display of the last calculation from the session
+
+### `myapp/static/css/style.css`
+
+Contains CSS styles for the calculator interface, making it responsive and visually appealing.
+
+### `myapp/static/js/script.js`
+
+Contains JavaScript code for any client-side functionality (if implemented).
+
+### `config.py`
+
+Configuration file for the Flask application. It includes settings like the secret key and debug mode.
+
+### `main.py`
+
+The entry point for running the Flask application.
+
+## Error Handling
+
+The application includes robust error handling:
+- Invalid mathematical expressions are caught and appropriate error messages are displayed.
+- Internal server errors are logged and a generic error message is shown to the user.
+
+## Logging
+
+The application logs important events:
+- Successful calculations
+- Errors in calculations
+- Application startup and shutdown
+
+Logs are stored in the `instance` folder.
+
+## Session Management
+
+The application uses Flask's session management to store the last calculation. This persists across multiple requests from the same client.
+
+## Contributing
+
+Contributions to improve the calculator are welcome. Please follow these steps:
+
+1. Fork the repository
+2. Create a new branch (`git checkout -b feature-branch`)
+3. Make your changes and commit them (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin feature-branch`)
+5. Create a new Pull Request
 
 
-# Weather App
+
+
+# Flask Master Class - Day 4 : API Integration working with external APIs (Weather API)
 
 This is a simple Flask-based web application that fetches and displays weather data using the Open-Meteo API. It's designed as a learning project for beginners to understand the basics of web development with Python and Flask.
 
@@ -458,6 +620,9 @@ This file contains the HTML structure of our web page. Key points:
 6. **JSON Parsing**: The application parses JSON data received from the API.
 
 7. **Error Handling**: Basic error handling is implemented to check if the API request was successful.
+
+
+   ## Weather API document :  ([https://open-meteo.com/](https://open-meteo.com/)) 
 
 ## Next Steps
 
